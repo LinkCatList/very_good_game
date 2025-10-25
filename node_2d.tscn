@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://bntapn4gri3fw"]
+
+[ext_resource type="Script" path="res://new_script.gd" id="2_t3a1m"]
+[ext_resource type="PackedScene" uid="uid://bsranruglqb0k" path="res://grave.tscn" id="3_3qih6"]
+[ext_resource type="Texture2D" uid="uid://6kjulnce407q" path="res://New Piskel (2).png" id="3_e7qqo"]
+[ext_resource type="PackedScene" uid="uid://wj62pkoa0x5a" path="res://wall.tscn" id="4_ra3a6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evgax"]
+size = Vector2(132, 132)
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_2pjy8"]
+scenes/1/scene = ExtResource("4_ra3a6")
+scenes/2/scene = ExtResource("4_ra3a6")
+
+[sub_resource type="TileSet" id="TileSet_rrfjw"]
+sources/1 = SubResource("TileSetScenesCollectionSource_2pjy8")
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(264, 264)
+
+[node name="Zombak" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+script = ExtResource("2_t3a1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zombak"]
+shape = SubResource("RectangleShape2D_evgax")
+
+[node name="NewPiskel(2)" type="Sprite2D" parent="Zombak"]
+position = Vector2(8, 5.42101e-20)
+scale = Vector2(0.411833, 0.411833)
+texture = ExtResource("3_e7qqo")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_3qih6")]
+position = Vector2(0, 132)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("3_3qih6")]
+position = Vector2(132, 0)
+
+[node name="Wall" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(384, 0)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(264, 396)
+tile_set = SubResource("TileSet_rrfjw")
