@@ -1,26 +1,27 @@
-[gd_scene load_steps=25 format=3 uid="uid://bntapn4gri3fw"]
+[gd_scene load_steps=26 format=3 uid="uid://bntapn4gri3fw"]
 
 [ext_resource type="Texture2D" uid="uid://cl6ci0xdqxvvx" path="res://dirt.png" id="1_dny71"]
 [ext_resource type="PackedScene" uid="uid://bo4lumfku0bie" path="res://player.tscn" id="1_ikhpv"]
 [ext_resource type="Texture2D" uid="uid://cefyia4q6v2rm" path="res://grass.png" id="1_uqft6"]
 [ext_resource type="PackedScene" uid="uid://bsranruglqb0k" path="res://grave.tscn" id="3_3qih6"]
-[ext_resource type="PackedScene" path="res://cat.tscn" id="4_nobhg"]
+[ext_resource type="PackedScene" uid="uid://0be6od88x3xe" path="res://cat.tscn" id="4_nobhg"]
 [ext_resource type="PackedScene" uid="uid://wj62pkoa0x5a" path="res://wall.tscn" id="4_ra3a6"]
 [ext_resource type="Texture2D" uid="uid://cpfxurttyooo1" path="res://New Piskel (11).png" id="7_2iph2"]
-[ext_resource type="Script" uid="uid://u7nnxcgbph8o" path="res://restart_button.gd" id="7_2m46o"]
+[ext_resource type="Script" path="res://restart_button.gd" id="7_2m46o"]
 [ext_resource type="Texture2D" uid="uid://ce76k1os4d2b6" path="res://music_player.png" id="9_m0m0b"]
 [ext_resource type="Texture2D" uid="uid://ciccshts7g521" path="res://pickaxe.png" id="10_wof2e"]
 [ext_resource type="Texture2D" uid="uid://d1sikjjcbw1la" path="res://bondage.png" id="11_ohhng"]
 [ext_resource type="Texture2D" uid="uid://bguln16p8j0k5" path="res://food.png" id="12_k3cf1"]
 [ext_resource type="Texture2D" uid="uid://d3lmwy1h2dndf" path="res://balloon.png" id="12_ygm52"]
-[ext_resource type="PackedScene" path="res://super_bondage.tscn" id="14_nemd0"]
+[ext_resource type="PackedScene" uid="uid://bdmque1vo86m3" path="res://super_bondage.tscn" id="14_nemd0"]
 [ext_resource type="AudioStream" uid="uid://br0xk51yujgp4" path="res://music/without_music.mp3" id="15_d2bti"]
-[ext_resource type="PackedScene" path="res://pickaxe.tscn" id="15_smequ"]
-[ext_resource type="PackedScene" path="res://music_player.tscn" id="16_klcgu"]
-[ext_resource type="PackedScene" path="res://food.tscn" id="17_un7pg"]
-[ext_resource type="PackedScene" path="res://balloon.tscn" id="18_ryb6w"]
-[ext_resource type="PackedScene" path="res://fake_wall.tscn" id="19_14xli"]
-[ext_resource type="PackedScene" uid="uid://5pp6uvnx82g7" path="res://teleport.tscn" id="20_fs4d3"]
+[ext_resource type="PackedScene" uid="uid://cmjay1kfxnj8" path="res://pickaxe.tscn" id="15_smequ"]
+[ext_resource type="PackedScene" uid="uid://be7gj6dydqyyn" path="res://music_player.tscn" id="16_klcgu"]
+[ext_resource type="PackedScene" uid="uid://dtertp8miknli" path="res://food.tscn" id="17_un7pg"]
+[ext_resource type="PackedScene" uid="uid://dd733f12cfugn" path="res://balloon.tscn" id="18_ryb6w"]
+[ext_resource type="PackedScene" uid="uid://boo6eill4yj2t" path="res://fake_wall.tscn" id="19_14xli"]
+[ext_resource type="PackedScene" path="res://teleport.tscn" id="20_fs4d3"]
+[ext_resource type="PackedScene" uid="uid://bhr0etmndimwd" path="res://pizdec.tscn" id="22_m52m8"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uhbpk"]
 
@@ -100,6 +101,12 @@ position = Vector2(1187.99, 924)
 
 [node name="Wall16" parent="Level1" instance=ExtResource("4_ra3a6")]
 position = Vector2(1319.99, 528)
+
+[node name="Wall27" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(1452, 528)
+
+[node name="Wall28" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(1452, 792)
 
 [node name="Wall17" parent="Level1" instance=ExtResource("4_ra3a6")]
 position = Vector2(1319.99, 396)
@@ -245,6 +252,18 @@ position = Vector2(3168, 924)
 
 [node name="Wall30" parent="Level2" instance=ExtResource("4_ra3a6")]
 position = Vector2(4092, 396)
+
+[node name="Wall60" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(4224, 528)
+
+[node name="Wall61" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(4356, 528)
+
+[node name="Wall62" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(4224, 792)
+
+[node name="Wall63" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(4356, 792)
 
 [node name="Wall31" parent="Level2" instance=ExtResource("4_ra3a6")]
 position = Vector2(3960, 396)
@@ -494,8 +513,20 @@ position = Vector2(8712, 924)
 [node name="Wall108" parent="." instance=ExtResource("4_ra3a6")]
 position = Vector2(8712, 792)
 
+[node name="Wall166" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(8976, 792)
+
+[node name="Wall167" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(8844, 792)
+
 [node name="Wall109" parent="." instance=ExtResource("4_ra3a6")]
 position = Vector2(8712, 528)
+
+[node name="Wall164" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(8976, 528)
+
+[node name="Wall165" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(8844, 528)
 
 [node name="Wall110" parent="." instance=ExtResource("4_ra3a6")]
 position = Vector2(8712, 396)
@@ -674,6 +705,12 @@ position = Vector2(6204, 1188)
 [node name="Wall80" parent="." instance=ExtResource("4_ra3a6")]
 position = Vector2(6468, 792)
 
+[node name="Wall162" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(6732, 792)
+
+[node name="Wall163" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(6600, 792)
+
 [node name="Wall81" parent="." instance=ExtResource("4_ra3a6")]
 position = Vector2(6468, 924)
 
@@ -709,6 +746,12 @@ position = Vector2(5544, 924)
 
 [node name="Wall69" parent="." instance=ExtResource("4_ra3a6")]
 position = Vector2(6468, 528)
+
+[node name="Wall151" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(6732, 528)
+
+[node name="Wall161" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(6600, 528)
 
 [node name="Wall70" parent="." instance=ExtResource("4_ra3a6")]
 position = Vector2(6468, 396)
@@ -779,7 +822,7 @@ position = Vector2(5940, 1056)
 position = Vector2(8184, 1056)
 
 [node name="StaticBody2D13" parent="." instance=ExtResource("18_ryb6w")]
-position = Vector2(10296, 1056)
+position = Vector2(10956, 660)
 
 [node name="StaticBody2D23" parent="." instance=ExtResource("19_14xli")]
 position = Vector2(10164, 660)
@@ -841,6 +884,5 @@ level = 4
 position = Vector2(9108, 660)
 level = 5
 
-[node name="Teleport5" parent="." instance=ExtResource("20_fs4d3")]
-position = Vector2(11352, 660)
-level = 3
+[node name="Pizdec" parent="." instance=ExtResource("22_m52m8")]
+position = Vector2(4224, 1056)

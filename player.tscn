@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bo4lumfku0bie"]
 
-[ext_resource type="Script" uid="uid://dwi0eqjuhyjun" path="res://new_script.gd" id="1_wj5gw"]
+[ext_resource type="Script" path="res://new_script.gd" id="1_wj5gw"]
 [ext_resource type="Texture2D" uid="uid://6kjulnce407q" path="res://rick.png" id="2_pfw5v"]
 [ext_resource type="Texture2D" uid="uid://ciccshts7g521" path="res://pickaxe.png" id="3_wqagn"]
 
@@ -40,8 +40,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hqtel"]
 _data = {
-&"RESET": SubResource("Animation_i3pqv"),
-&"make_alive": SubResource("Animation_onrkg")
+"RESET": SubResource("Animation_i3pqv"),
+"make_alive": SubResource("Animation_onrkg")
 }
 
 [node name="Zombak" type="RigidBody2D"]
@@ -65,7 +65,7 @@ texture = ExtResource("2_pfw5v")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_hqtel")
+"": SubResource("AnimationLibrary_hqtel")
 }
 autoplay = "make_alive"
 

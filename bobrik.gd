@@ -11,7 +11,7 @@ var game_data = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Bobrik.go_to_level(5)
+	Bobrik.go_to_level(1)
 	pass # Replace with function body.
 
 func save_game():
