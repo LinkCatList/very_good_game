@@ -1,45 +1,140 @@
-[gd_scene load_steps=7 format=3 uid="uid://bntapn4gri3fw"]
+[gd_scene load_steps=10 format=3 uid="uid://bntapn4gri3fw"]
 
-[ext_resource type="PackedScene" uid="uid://bo4lumfku0bie" path="res://player.tscn" id="1_ikhpv"]
+[ext_resource type="Texture2D" uid="uid://cl6ci0xdqxvvx" path="res://New Piskel (8).png" id="1_dny71"]
+[ext_resource type="PackedScene" uid="uid://d3se8xfp0h0id" path="res://player.tscn" id="1_ikhpv"]
+[ext_resource type="Texture2D" uid="uid://cefyia4q6v2rm" path="res://New Piskel (9).png" id="1_uqft6"]
 [ext_resource type="PackedScene" uid="uid://bsranruglqb0k" path="res://grave.tscn" id="3_3qih6"]
-[ext_resource type="PackedScene" path="res://cat.tscn" id="4_nobhg"]
+[ext_resource type="PackedScene" uid="uid://0be6od88x3xe" path="res://cat.tscn" id="4_nobhg"]
 [ext_resource type="PackedScene" uid="uid://wj62pkoa0x5a" path="res://wall.tscn" id="4_ra3a6"]
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_2pjy8"]
-scenes/1/scene = ExtResource("4_ra3a6")
-scenes/2/scene = ExtResource("4_ra3a6")
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uhbpk"]
 
-[sub_resource type="TileSet" id="TileSet_rrfjw"]
-sources/1 = SubResource("TileSetScenesCollectionSource_2pjy8")
+[sub_resource type="QuadMesh" id="QuadMesh_k7qvn"]
+lightmap_size_hint = Vector2i(7, 7)
+
+[sub_resource type="MeshTexture" id="MeshTexture_afcrt"]
+mesh = SubResource("QuadMesh_k7qvn")
+base_texture = SubResource("CompressedTexture2D_uhbpk")
+image_size = Vector2(200, 200)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(660, 660)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+texture_repeat = 2
+position = Vector2(2243.99, 528)
+scale = Vector2(1.75053, 1.4954)
+texture = ExtResource("1_uqft6")
+polygon = PackedVector2Array(-1281.89, -353.083, -1281.89, 617.894, -226.217, 617.894, -226.217, -353.083)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+texture_repeat = 2
+position = Vector2(1653.53, 580.505)
+texture = ExtResource("1_dny71")
+polygon = PackedVector2Array(-1257.55, -184.505, -1257.55, 475.495, -333.547, 475.495, -333.547, -184.505)
 
 [node name="Zombak" parent="." instance=ExtResource("1_ikhpv")]
-position = Vector2(264, 264)
+position = Vector2(923.987, 924)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(396, 264)
+position = Vector2(1055.99, 924)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("3_3qih6")]
+position = Vector2(791.987, 792)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("3_3qih6")]
+position = Vector2(792, 924)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("3_3qih6")]
+position = Vector2(1187.99, 660)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("3_3qih6")]
+position = Vector2(1055.99, 660)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("3_3qih6")]
+position = Vector2(527.987, 924)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("3_3qih6")]
+position = Vector2(791.987, 660)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(264, 396)
+position = Vector2(1056, 792)
 
 [node name="Wall" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(264, 132)
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-position = Vector2(660, 792)
-scale = Vector2(1.09697, 1.04696)
-tile_set = SubResource("TileSet_rrfjw")
-
-[node name="Wall2" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(924, 396)
-
-[node name="Wall3" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(660, 528)
-
-[node name="Wall4" parent="." instance=ExtResource("4_nobhg")]
-position = Vector2(396, 528)
+position = Vector2(923.987, 792)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 264)
 anchor_mode = 0
-zoom = Vector2(0.25, 0.25)
+zoom = Vector2(0.7, 0.7)
+
+[node name="Wall6" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(395.987, 396)
+
+[node name="Wall21" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(1319.99, 1056)
+
+[node name="Wall22" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(1319.99, 792)
+
+[node name="Wall15" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(1187.99, 924)
+
+[node name="Wall16" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(1319.99, 528)
+
+[node name="Wall17" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(1319.99, 396)
+
+[node name="Wall18" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(1187.99, 1056)
+
+[node name="Wall19" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(1187.99, 396)
+
+[node name="Wall20" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(1055.99, 396)
+
+[node name="Wall7" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(923.987, 1056)
+
+[node name="Wall8" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(791.987, 1056)
+
+[node name="Wall9" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(659.987, 1056)
+
+[node name="Wall10" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(527.987, 1056)
+
+[node name="Wall11" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(395.987, 1056)
+
+[node name="Wall12" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(395.987, 792)
+
+[node name="Wall23" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(1319.99, 924)
+
+[node name="Wall24" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(395.987, 924)
+
+[node name="Wall13" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(395.987, 660)
+
+[node name="Wall14" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(395.987, 528)
+
+[node name="Wall3" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(659.987, 396)
+
+[node name="Wall4" parent="." instance=ExtResource("4_nobhg")]
+position = Vector2(1055.99, 1056)
+
+[node name="Wall5" parent="." instance=ExtResource("4_nobhg")]
+position = Vector2(923.987, 396)
+
+[node name="Ground" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(263.987, 1320)
+texture = SubResource("MeshTexture_afcrt")

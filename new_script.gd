@@ -12,11 +12,11 @@ func _process(delta: float) -> void:
 	var move_vector = Vector2.ZERO
 	if Input.is_action_just_pressed("move_left"):
 		move_vector.x -= SPEED
-	if Input.is_action_just_pressed("move_right"):
+	elif Input.is_action_just_pressed("move_right"):
 		move_vector.x += SPEED
-	if Input.is_action_just_pressed("move_up"):
+	elif Input.is_action_just_pressed("move_up"):
 		move_vector.y -= SPEED
-	if Input.is_action_just_pressed("move_down"):
+	elif Input.is_action_just_pressed("move_down"):
 		move_vector.y += SPEED
 	
 	var result = Bobrik.move_and_collide_2_0_new_edition(self, move_vector)
