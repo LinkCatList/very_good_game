@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmjay1kfxnj8"]
+
+[ext_resource type="Texture2D" uid="uid://ciccshts7g521" path="res://pickaxe.png" id="1_pj3rp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkfgc"]
+size = Vector2(130, 130)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="."]
+scale = Vector2(1.01846, 1.0868)
+texture = ExtResource("1_pj3rp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wkfgc")

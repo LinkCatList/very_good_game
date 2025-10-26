@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://be7gj6dydqyyn"]
+
+[ext_resource type="Texture2D" uid="uid://ce76k1os4d2b6" path="res://music_player.png" id="1_v57wq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkfgc"]
+size = Vector2(130, 130)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="."]
+scale = Vector2(0.936, 1)
+texture = ExtResource("1_v57wq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wkfgc")

@@ -10,13 +10,22 @@ var pickaxeHandle = $Pickaxe
 
 @onready
 var BondageTarget = $"../Targets/Bondage"
+@onready
+var PickAxeTarget = $"../Targets/Pickaxe"
+@onready
+var MusicPlayerTarget = $"../Targets/MusicPlayer"
+@onready
+var FoodTarget = $"../Targets/Food"
+@onready
+var BalloonTarget = $"../Targets/Balloon"
 
 func activate_target(target: Sprite2D):
 	target.modulate = Color.WHITE
 
 
 var pickaxe = false
-var canUsePickaxe = true
+var canUsePickaxe = false
+var allPumpkins = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -31,6 +40,9 @@ func activate_super_bondage():
 func activate_pickaxe():
 	canUsePickaxe = true
 	pickaxe = true
+	
+func activate_music():
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -59,6 +71,8 @@ func _process(delta: float) -> void:
 				object.move(move_vector)
 				
 		if object.scene_file_path.get_file().get_basename() == "pickaxe":
+			object.queue_free()
+			activate_target(PickAxeTarget)
 			self.global_position += move_vector
 			activate_pickaxe()
 
@@ -67,6 +81,24 @@ func _process(delta: float) -> void:
 			activate_target(BondageTarget)
 			self.global_position += move_vector
 			activate_super_bondage()
+			
+		if object.scene_file_path.get_file().get_basename() == "music_player":
+			object.queue_free()
+			activate_target(MusicPlayerTarget)
+			self.global_position += move_vector
+			activate_music()
+			
+		if object.scene_file_path.get_file().get_basename() == "food":
+			object.queue_free()
+			activate_target(FoodTarget)
+			self.global_position += move_vector
+			allPumpkins = true	
+			
+		if object.scene_file_path.get_file().get_basename() == "balloon":
+			object.queue_free()
+			activate_target(BalloonTarget)
+			self.global_position += move_vector
+
 	else:
 		self.global_position += move_vector
 		

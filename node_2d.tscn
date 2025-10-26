@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bntapn4gri3fw"]
+[gd_scene load_steps=22 format=3 uid="uid://bntapn4gri3fw"]
 
 [ext_resource type="Texture2D" uid="uid://cl6ci0xdqxvvx" path="res://dirt.png" id="1_dny71"]
 [ext_resource type="PackedScene" uid="uid://d3se8xfp0h0id" path="res://player.tscn" id="1_ikhpv"]
@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://bguln16p8j0k5" path="res://food.png" id="12_k3cf1"]
 [ext_resource type="Texture2D" uid="uid://d3lmwy1h2dndf" path="res://balloon.png" id="12_ygm52"]
 [ext_resource type="PackedScene" uid="uid://bdmque1vo86m3" path="res://super_bondage.tscn" id="14_nemd0"]
+[ext_resource type="PackedScene" uid="uid://cmjay1kfxnj8" path="res://pickaxe.tscn" id="15_smequ"]
+[ext_resource type="PackedScene" uid="uid://be7gj6dydqyyn" path="res://music_player.tscn" id="16_klcgu"]
+[ext_resource type="PackedScene" uid="uid://dtertp8miknli" path="res://food.tscn" id="17_un7pg"]
+[ext_resource type="PackedScene" uid="uid://dd733f12cfugn" path="res://balloon.tscn" id="18_ryb6w"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uhbpk"]
 
@@ -55,7 +59,7 @@ position = Vector2(528, 528)
 position = Vector2(924, 660)
 
 [node name="StaticBody2D3" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(660, 792)
+position = Vector2(660, 924)
 
 [node name="StaticBody2D4" parent="." instance=ExtResource("3_3qih6")]
 position = Vector2(792, 924)
@@ -70,7 +74,7 @@ position = Vector2(1056, 792)
 position = Vector2(527.987, 924)
 
 [node name="StaticBody2D5" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(660, 528)
+position = Vector2(924, 792)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("3_3qih6")]
 position = Vector2(792, 792)
@@ -212,3 +216,15 @@ texture = ExtResource("12_ygm52")
 
 [node name="StaticBody2D9" parent="." instance=ExtResource("14_nemd0")]
 position = Vector2(792, 528)
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("15_smequ")]
+position = Vector2(792, 660)
+
+[node name="StaticBody2D11" parent="." instance=ExtResource("16_klcgu")]
+position = Vector2(528, 792)
+
+[node name="StaticBody2D12" parent="." instance=ExtResource("17_un7pg")]
+position = Vector2(660, 792)
+
+[node name="StaticBody2D13" parent="." instance=ExtResource("18_ryb6w")]
+position = Vector2(660, 528)

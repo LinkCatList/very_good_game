@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd733f12cfugn"]
+
+[ext_resource type="Texture2D" uid="uid://d3lmwy1h2dndf" path="res://balloon.png" id="1_i1eft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkfgc"]
+size = Vector2(130, 130)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="."]
+scale = Vector2(0.936, 1)
+texture = ExtResource("1_i1eft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wkfgc")

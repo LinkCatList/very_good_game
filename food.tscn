@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtertp8miknli"]
+
+[ext_resource type="Texture2D" uid="uid://bguln16p8j0k5" path="res://food.png" id="1_jtn8a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkfgc"]
+size = Vector2(130, 130)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="."]
+scale = Vector2(1.01846, 1.0868)
+texture = ExtResource("1_jtn8a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wkfgc")
