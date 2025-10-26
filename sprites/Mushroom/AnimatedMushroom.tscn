@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://dp576liotosoa"]
+
+[ext_resource type="Texture2D" uid="uid://j7dbhywho2wl" path="res://sprites/Mushroom/Mushroom_frame_001_transparent.png" id="1_lggij"]
+[ext_resource type="Texture2D" uid="uid://c81feqcoxh1n6" path="res://sprites/Mushroom/Mushroom_frame_002_transparent.png" id="2_fti3a"]
+[ext_resource type="Texture2D" uid="uid://bx7sb8ilvu3x0" path="res://sprites/Mushroom/Mushroom_frame_003_transparent.png" id="3_gwcsa"]
+[ext_resource type="Texture2D" uid="uid://cb3m4iw42fty1" path="res://sprites/Mushroom/Mushroom_frame_004_transparent.png" id="4_uowt1"]
+[ext_resource type="Texture2D" uid="uid://b3llhgvj7j3u6" path="res://sprites/Mushroom/Mushroom_frame_005_transparent.png" id="5_n12q7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0c5r2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lggij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fti3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gwcsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uowt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n12q7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedMusicPlayer" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_0c5r2")
+autoplay = "default"
+frame_progress = 0.734031

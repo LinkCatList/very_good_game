@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm83vg25fc813"]
+
+[ext_resource type="Texture2D" uid="uid://drasnthdw5bwf" path="res://sprites/MusicPlayer/MusicPlayer_frame_001.png" id="1_a8o4c"]
+[ext_resource type="Texture2D" uid="uid://cdat8vi86l4rq" path="res://sprites/MusicPlayer/MusicPlayer_frame_002.png" id="2_b36er"]
+[ext_resource type="Texture2D" uid="uid://d4i4jb2v5ujj8" path="res://sprites/MusicPlayer/MusicPlayer_frame_003.png" id="3_lilwg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kfj52"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a8o4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b36er")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lilwg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedMusicPlayer" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_kfj52")
+autoplay = "default"

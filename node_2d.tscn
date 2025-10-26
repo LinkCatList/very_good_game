@@ -1,24 +1,26 @@
-[gd_scene load_steps=23 format=3 uid="uid://bntapn4gri3fw"]
+[gd_scene load_steps=25 format=3 uid="uid://bntapn4gri3fw"]
 
 [ext_resource type="Texture2D" uid="uid://cl6ci0xdqxvvx" path="res://dirt.png" id="1_dny71"]
-[ext_resource type="PackedScene" uid="uid://d3se8xfp0h0id" path="res://player.tscn" id="1_ikhpv"]
+[ext_resource type="PackedScene" uid="uid://bo4lumfku0bie" path="res://player.tscn" id="1_ikhpv"]
 [ext_resource type="Texture2D" uid="uid://cefyia4q6v2rm" path="res://grass.png" id="1_uqft6"]
 [ext_resource type="PackedScene" uid="uid://bsranruglqb0k" path="res://grave.tscn" id="3_3qih6"]
-[ext_resource type="PackedScene" uid="uid://0be6od88x3xe" path="res://cat.tscn" id="4_nobhg"]
+[ext_resource type="PackedScene" path="res://cat.tscn" id="4_nobhg"]
 [ext_resource type="PackedScene" uid="uid://wj62pkoa0x5a" path="res://wall.tscn" id="4_ra3a6"]
 [ext_resource type="Texture2D" uid="uid://cpfxurttyooo1" path="res://New Piskel (11).png" id="7_2iph2"]
-[ext_resource type="Script" path="res://restart_button.gd" id="7_2m46o"]
+[ext_resource type="Script" uid="uid://u7nnxcgbph8o" path="res://restart_button.gd" id="7_2m46o"]
 [ext_resource type="Texture2D" uid="uid://ce76k1os4d2b6" path="res://music_player.png" id="9_m0m0b"]
 [ext_resource type="Texture2D" uid="uid://ciccshts7g521" path="res://pickaxe.png" id="10_wof2e"]
 [ext_resource type="Texture2D" uid="uid://d1sikjjcbw1la" path="res://bondage.png" id="11_ohhng"]
 [ext_resource type="Texture2D" uid="uid://bguln16p8j0k5" path="res://food.png" id="12_k3cf1"]
 [ext_resource type="Texture2D" uid="uid://d3lmwy1h2dndf" path="res://balloon.png" id="12_ygm52"]
-[ext_resource type="PackedScene" uid="uid://bdmque1vo86m3" path="res://super_bondage.tscn" id="14_nemd0"]
-[ext_resource type="PackedScene" uid="uid://cmjay1kfxnj8" path="res://pickaxe.tscn" id="15_smequ"]
-[ext_resource type="PackedScene" uid="uid://be7gj6dydqyyn" path="res://music_player.tscn" id="16_klcgu"]
-[ext_resource type="PackedScene" uid="uid://dtertp8miknli" path="res://food.tscn" id="17_un7pg"]
-[ext_resource type="PackedScene" uid="uid://dd733f12cfugn" path="res://balloon.tscn" id="18_ryb6w"]
-[ext_resource type="PackedScene" uid="uid://boo6eill4yj2t" path="res://fake_wall.tscn" id="19_14xli"]
+[ext_resource type="PackedScene" path="res://super_bondage.tscn" id="14_nemd0"]
+[ext_resource type="AudioStream" uid="uid://br0xk51yujgp4" path="res://music/without_music.mp3" id="15_d2bti"]
+[ext_resource type="PackedScene" path="res://pickaxe.tscn" id="15_smequ"]
+[ext_resource type="PackedScene" path="res://music_player.tscn" id="16_klcgu"]
+[ext_resource type="PackedScene" path="res://food.tscn" id="17_un7pg"]
+[ext_resource type="PackedScene" path="res://balloon.tscn" id="18_ryb6w"]
+[ext_resource type="PackedScene" path="res://fake_wall.tscn" id="19_14xli"]
+[ext_resource type="PackedScene" uid="uid://5pp6uvnx82g7" path="res://teleport.tscn" id="20_fs4d3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uhbpk"]
 
@@ -31,54 +33,278 @@ base_texture = SubResource("CompressedTexture2D_uhbpk")
 image_size = Vector2(200, 200)
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(660, 660)
 
-[node name="Polygon2D2" type="Polygon2D" parent="."]
+[node name="Level1" type="Node2D" parent="."]
+
+[node name="Polygon2D2" type="Polygon2D" parent="Level1"]
 texture_repeat = 2
 position = Vector2(2243.99, 528)
 scale = Vector2(1.75053, 1.4954)
 texture = ExtResource("1_uqft6")
 polygon = PackedVector2Array(-1281.89, -353.083, -1281.89, 617.894, -226.217, 617.894, -226.217, -353.083)
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
+[node name="Polygon2D" type="Polygon2D" parent="Level1"]
 texture_repeat = 2
 position = Vector2(1653.53, 580.505)
 texture = ExtResource("1_dny71")
 polygon = PackedVector2Array(-1257.55, -184.505, -1257.55, 475.495, -333.547, 475.495, -333.547, -184.505)
 
-[node name="Polygon2D4" type="Polygon2D" parent="."]
+[node name="Polygon2D4" type="Polygon2D" parent="Level1"]
 texture_repeat = 2
 position = Vector2(1653.53, 580.505)
 texture = ExtResource("1_dny71")
 polygon = PackedVector2Array(-1257.55, -184.505, -1257.55, 475.495, -333.547, 475.495, -333.547, -184.505)
 
-[node name="Polygon2D3" type="Polygon2D" parent="."]
+[node name="Polygon2D3" type="Polygon2D" parent="Level1"]
 texture_repeat = 2
 position = Vector2(2063.7, 603.394)
 scale = Vector2(0.646697, 0.408628)
 texture = ExtResource("1_dny71")
 polygon = PackedVector2Array(-1257.55, -184.505, -1257.55, 314.246, -1257.55, 475.495, -333.547, 475.495, -333.547, -184.505)
 
-[node name="Polygon2D5" type="Polygon2D" parent="."]
+[node name="StaticBody2D" parent="Level1" instance=ExtResource("3_3qih6")]
+position = Vector2(924, 924)
+
+[node name="StaticBody2D3" parent="Level1" instance=ExtResource("3_3qih6")]
+position = Vector2(660, 924)
+
+[node name="StaticBody2D4" parent="Level1" instance=ExtResource("3_3qih6")]
+position = Vector2(924, 528)
+
+[node name="StaticBody2D6" parent="Level1" instance=ExtResource("3_3qih6")]
+position = Vector2(1187.99, 660)
+
+[node name="StaticBody2D8" parent="Level1" instance=ExtResource("3_3qih6")]
+position = Vector2(660, 660)
+
+[node name="StaticBody2D5" parent="Level1" instance=ExtResource("3_3qih6")]
+position = Vector2(924, 792)
+
+[node name="StaticBody2D2" parent="Level1" instance=ExtResource("3_3qih6")]
+position = Vector2(792, 660)
+
+[node name="Wall" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(1056, 528)
+
+[node name="Wall6" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(395.987, 396)
+
+[node name="Wall21" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(1319.99, 1056)
+
+[node name="Wall22" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(1319.99, 792)
+
+[node name="Wall15" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(1187.99, 924)
+
+[node name="Wall16" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(1319.99, 528)
+
+[node name="Wall17" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(1319.99, 396)
+
+[node name="Wall18" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(1187.99, 1056)
+
+[node name="Wall19" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(1187.99, 396)
+
+[node name="Wall20" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(1055.99, 396)
+
+[node name="Wall7" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(923.987, 1056)
+
+[node name="Wall8" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(791.987, 1056)
+
+[node name="Wall9" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(659.987, 1056)
+
+[node name="Wall10" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(527.987, 1056)
+
+[node name="Wall11" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(395.987, 1056)
+
+[node name="Wall12" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(395.987, 792)
+
+[node name="Wall23" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(1319.99, 924)
+
+[node name="Wall24" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(395.987, 924)
+
+[node name="Wall13" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(395.987, 660)
+
+[node name="Wall14" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(395.987, 528)
+
+[node name="Wall3" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(659.987, 396)
+
+[node name="Wall25" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(792, 396)
+
+[node name="Wall26" parent="Level1" instance=ExtResource("4_ra3a6")]
+position = Vector2(528, 396)
+
+[node name="Wall4" parent="Level1" instance=ExtResource("4_nobhg")]
+position = Vector2(1055.99, 1056)
+
+[node name="Wall5" parent="Level1" instance=ExtResource("4_nobhg")]
+position = Vector2(923.987, 396)
+
+[node name="Ground" type="Sprite2D" parent="Level1"]
+texture_repeat = 2
+position = Vector2(263.987, 1320)
+texture = SubResource("MeshTexture_afcrt")
+
+[node name="MusicPlayerDrop" parent="Level1" instance=ExtResource("16_klcgu")]
+position = Vector2(1056, 924)
+
+[node name="Level2" type="Node2D" parent="."]
+
+[node name="Polygon2D5" type="Polygon2D" parent="Level2"]
 texture_repeat = 2
 position = Vector2(5015.99, 528)
 scale = Vector2(1.75053, 1.4954)
 texture = ExtResource("1_uqft6")
 polygon = PackedVector2Array(-1281.89, -353.083, -1281.89, -178.428, -1281.89, 617.894, -226.217, 617.894, -226.217, -353.083)
 
-[node name="Polygon2D6" type="Polygon2D" parent="."]
+[node name="Polygon2D6" type="Polygon2D" parent="Level2"]
 texture_repeat = 2
 position = Vector2(4425.53, 617.406)
 scale = Vector2(1, 1.2)
 texture = ExtResource("1_dny71")
 polygon = PackedVector2Array(-1257.55, -184.505, -1257.55, 475.495, -333.547, 475.495, -333.547, -184.505)
 
-[node name="Polygon2D7" type="Polygon2D" parent="."]
+[node name="Polygon2D7" type="Polygon2D" parent="Level2"]
 texture_repeat = 2
 position = Vector2(4835.7, 603.394)
 scale = Vector2(0.646697, 0.408628)
 texture = ExtResource("1_dny71")
 polygon = PackedVector2Array(-1257.55, -184.505, -1257.55, 314.246, -1257.55, 475.495, -333.547, 475.495, -333.547, -184.505)
+
+[node name="StaticBody2D15" parent="Level2" instance=ExtResource("3_3qih6")]
+position = Vector2(3564, 924)
+
+[node name="StaticBody2D16" parent="Level2" instance=ExtResource("3_3qih6")]
+position = Vector2(3432, 792)
+
+[node name="StaticBody2D18" parent="Level2" instance=ExtResource("3_3qih6")]
+position = Vector2(3828, 924)
+
+[node name="StaticBody2D19" parent="Level2" instance=ExtResource("3_3qih6")]
+position = Vector2(3564, 1056)
+
+[node name="StaticBody2D20" parent="Level2" instance=ExtResource("3_3qih6")]
+position = Vector2(3828, 528)
+
+[node name="Wall27" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3168, 396)
+
+[node name="Wall28" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3168, 1056)
+
+[node name="Wall43" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3828, 1188)
+
+[node name="Wall48" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(4092, 792)
+
+[node name="Wall49" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(4092, 924)
+
+[node name="Wall50" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(4092, 1056)
+
+[node name="Wall51" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(4092, 1188)
+
+[node name="Wall52" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3960, 1188)
+
+[node name="Wall44" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3696, 1188)
+
+[node name="Wall45" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3564, 1188)
+
+[node name="Wall46" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3432, 1188)
+
+[node name="Wall47" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3168, 1188)
+
+[node name="Wall29" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3168, 924)
+
+[node name="Wall30" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(4092, 396)
+
+[node name="Wall31" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3960, 396)
+
+[node name="Wall32" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3828, 396)
+
+[node name="Wall54" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3828, 792)
+
+[node name="Wall58" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3696, 792)
+
+[node name="Wall57" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3564, 528)
+
+[node name="Wall59" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3432, 528)
+
+[node name="Wall53" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3828, 660)
+
+[node name="Wall33" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3696, 396)
+
+[node name="Wall34" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3564, 396)
+
+[node name="Wall35" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3432, 396)
+
+[node name="Wall36" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3300, 396)
+
+[node name="Wall37" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3168, 792)
+
+[node name="Wall38" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3168, 660)
+
+[node name="Wall39" parent="Level2" instance=ExtResource("4_ra3a6")]
+position = Vector2(3168, 528)
+
+[node name="Wall40" parent="Level2" instance=ExtResource("4_nobhg")]
+position = Vector2(3300, 1188)
+
+[node name="Wall41" parent="Level2" instance=ExtResource("4_nobhg")]
+position = Vector2(3696, 924)
+
+[node name="Wall42" parent="Level2" instance=ExtResource("4_nobhg")]
+position = Vector2(4092, 528)
+
+[node name="Wall55" parent="Level2" instance=ExtResource("4_nobhg")]
+position = Vector2(3960, 1056)
+
+[node name="Wall56" parent="Level2" instance=ExtResource("4_nobhg")]
+position = Vector2(3960, 924)
+
+[node name="StaticBody2D10" parent="Level2" instance=ExtResource("15_smequ")]
+position = Vector2(3300, 1056)
 
 [node name="Polygon2D11" type="Polygon2D" parent="."]
 texture_repeat = 2
@@ -143,33 +369,6 @@ scale = Vector2(0.646697, 0.408628)
 texture = ExtResource("1_dny71")
 polygon = PackedVector2Array(-1257.55, -184.505, -1257.55, 314.246, -1257.55, 475.495, -333.547, 475.495, -333.547, -184.505)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(924, 924)
-
-[node name="StaticBody2D3" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(660, 924)
-
-[node name="StaticBody2D4" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(924, 528)
-
-[node name="StaticBody2D14" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(3300, 660)
-
-[node name="StaticBody2D15" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(3564, 924)
-
-[node name="StaticBody2D16" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(3432, 792)
-
-[node name="StaticBody2D18" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(3828, 924)
-
-[node name="StaticBody2D19" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(3564, 1056)
-
-[node name="StaticBody2D20" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(3828, 528)
-
 [node name="StaticBody2D21" parent="." instance=ExtResource("3_3qih6")]
 position = Vector2(5676, 660)
 
@@ -209,34 +408,13 @@ position = Vector2(6204, 1056)
 [node name="StaticBody2D27" parent="." instance=ExtResource("3_3qih6")]
 position = Vector2(6336, 924)
 
-[node name="StaticBody2D17" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(3960, 660)
-
-[node name="StaticBody2D6" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(1187.99, 660)
-
-[node name="StaticBody2D7" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(1056, 792)
-
-[node name="StaticBody2D8" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(660, 660)
-
-[node name="StaticBody2D5" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(924, 792)
-
-[node name="StaticBody2D2" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(792, 660)
-
-[node name="Wall" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(1056, 528)
+[node name="Zombak" parent="." instance=ExtResource("1_ikhpv")]
+position = Vector2(3300, 528)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(9636, 264)
 anchor_mode = 0
 zoom = Vector2(0.7, 0.7)
-
-[node name="Zombak" parent="Camera2D" instance=ExtResource("1_ikhpv")]
-position = Vector2(528, 264)
 
 [node name="Targets" type="Node2D" parent="Camera2D"]
 
@@ -288,24 +466,6 @@ theme_override_font_sizes/font_size = 32
 icon = ExtResource("7_2iph2")
 expand_icon = true
 script = ExtResource("7_2m46o")
-
-[node name="Wall6" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(395.987, 396)
-
-[node name="Wall21" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(1319.99, 1056)
-
-[node name="Wall22" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(1319.99, 792)
-
-[node name="Wall15" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(1187.99, 924)
-
-[node name="Wall16" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(1319.99, 528)
-
-[node name="Wall27" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3168, 396)
 
 [node name="Wall60" parent="." instance=ExtResource("4_ra3a6")]
 position = Vector2(5544, 396)
@@ -592,153 +752,6 @@ position = Vector2(5808, 792)
 [node name="Wall79" parent="." instance=ExtResource("4_ra3a6")]
 position = Vector2(5544, 528)
 
-[node name="Wall28" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3168, 1056)
-
-[node name="Wall43" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3828, 1188)
-
-[node name="Wall48" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(4092, 792)
-
-[node name="Wall49" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(4092, 924)
-
-[node name="Wall50" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(4092, 1056)
-
-[node name="Wall51" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(4092, 1188)
-
-[node name="Wall52" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3960, 1188)
-
-[node name="Wall44" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3696, 1188)
-
-[node name="Wall45" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3564, 1188)
-
-[node name="Wall46" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3432, 1188)
-
-[node name="Wall47" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3168, 1188)
-
-[node name="Wall29" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3168, 924)
-
-[node name="Wall30" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(4092, 396)
-
-[node name="Wall31" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3960, 396)
-
-[node name="Wall32" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3828, 396)
-
-[node name="Wall54" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3828, 792)
-
-[node name="Wall58" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3696, 792)
-
-[node name="Wall57" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3564, 528)
-
-[node name="Wall59" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3432, 528)
-
-[node name="Wall53" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3828, 660)
-
-[node name="Wall33" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3696, 396)
-
-[node name="Wall34" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3564, 396)
-
-[node name="Wall35" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3432, 396)
-
-[node name="Wall36" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3300, 396)
-
-[node name="Wall37" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3168, 792)
-
-[node name="Wall38" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3168, 660)
-
-[node name="Wall39" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(3168, 528)
-
-[node name="Wall17" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(1319.99, 396)
-
-[node name="Wall18" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(1187.99, 1056)
-
-[node name="Wall19" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(1187.99, 396)
-
-[node name="Wall20" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(1055.99, 396)
-
-[node name="Wall7" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(923.987, 1056)
-
-[node name="Wall8" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(791.987, 1056)
-
-[node name="Wall9" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(659.987, 1056)
-
-[node name="Wall10" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(527.987, 1056)
-
-[node name="Wall11" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(395.987, 1056)
-
-[node name="Wall12" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(395.987, 792)
-
-[node name="Wall23" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(1319.99, 924)
-
-[node name="Wall24" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(395.987, 924)
-
-[node name="Wall13" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(395.987, 660)
-
-[node name="Wall14" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(395.987, 528)
-
-[node name="Wall3" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(659.987, 396)
-
-[node name="Wall25" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(792, 396)
-
-[node name="Wall26" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(528, 396)
-
-[node name="Wall4" parent="." instance=ExtResource("4_nobhg")]
-position = Vector2(1055.99, 1056)
-
-[node name="Wall5" parent="." instance=ExtResource("4_nobhg")]
-position = Vector2(923.987, 396)
-
-[node name="Wall40" parent="." instance=ExtResource("4_nobhg")]
-position = Vector2(3300, 1188)
-
-[node name="Wall41" parent="." instance=ExtResource("4_nobhg")]
-position = Vector2(3696, 924)
-
-[node name="Wall42" parent="." instance=ExtResource("4_nobhg")]
-position = Vector2(4092, 528)
-
 [node name="Wall85" parent="." instance=ExtResource("4_nobhg")]
 position = Vector2(6072, 528)
 
@@ -754,12 +767,6 @@ position = Vector2(8580, 528)
 [node name="Wall91" parent="." instance=ExtResource("4_nobhg")]
 position = Vector2(6204, 792)
 
-[node name="Wall55" parent="." instance=ExtResource("4_nobhg")]
-position = Vector2(3960, 1056)
-
-[node name="Wall56" parent="." instance=ExtResource("4_nobhg")]
-position = Vector2(3960, 924)
-
 [node name="Ground" type="Sprite2D" parent="."]
 texture_repeat = 2
 position = Vector2(263.987, 1320)
@@ -767,12 +774,6 @@ texture = SubResource("MeshTexture_afcrt")
 
 [node name="StaticBody2D9" parent="." instance=ExtResource("14_nemd0")]
 position = Vector2(5940, 1056)
-
-[node name="StaticBody2D10" parent="." instance=ExtResource("15_smequ")]
-position = Vector2(3300, 1056)
-
-[node name="StaticBody2D11" parent="." instance=ExtResource("16_klcgu")]
-position = Vector2(1188, 792)
 
 [node name="StaticBody2D12" parent="." instance=ExtResource("17_un7pg")]
 position = Vector2(8184, 1056)
@@ -789,5 +790,57 @@ position = Vector2(10296, 924)
 [node name="StaticBody2D37" parent="." instance=ExtResource("19_14xli")]
 position = Vector2(10824, 660)
 
-[node name="StaticBody2D36" parent="." instance=ExtResource("19_14xli")]
-position = Vector2(10692, 660)
+[node name="MusicPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_d2bti")
+autoplay = true
+parameters/looping = true
+
+[node name="CameraLevel1" type="Marker2D" parent="."]
+position = Vector2(0, 264)
+
+[node name="CameraLevel2" type="Marker2D" parent="."]
+position = Vector2(2772, 264)
+
+[node name="CameraLevel3" type="Marker2D" parent="."]
+position = Vector2(5148, 264)
+
+[node name="CameraLevel4" type="Marker2D" parent="."]
+position = Vector2(7392, 264)
+
+[node name="CameraLevel5" type="Marker2D" parent="."]
+position = Vector2(9636, 264)
+
+[node name="PlayerPosLevel1" type="Marker2D" parent="."]
+position = Vector2(528, 528)
+
+[node name="PlayerPosLevel2" type="Marker2D" parent="."]
+position = Vector2(3300, 528)
+
+[node name="PlayerPosLevel3" type="Marker2D" parent="."]
+position = Vector2(5676, 528)
+
+[node name="PlayerPosLevel4" type="Marker2D" parent="."]
+position = Vector2(7920, 528)
+
+[node name="PlayerPosLevel5" type="Marker2D" parent="."]
+position = Vector2(10164, 528)
+
+[node name="Teleport1" parent="." instance=ExtResource("20_fs4d3")]
+position = Vector2(1584, 660)
+level = 2
+
+[node name="Teleport2" parent="." instance=ExtResource("20_fs4d3")]
+position = Vector2(4488, 660)
+level = 3
+
+[node name="Teleport3" parent="." instance=ExtResource("20_fs4d3")]
+position = Vector2(6864, 660)
+level = 4
+
+[node name="Teleport4" parent="." instance=ExtResource("20_fs4d3")]
+position = Vector2(9108, 660)
+level = 5
+
+[node name="Teleport5" parent="." instance=ExtResource("20_fs4d3")]
+position = Vector2(11352, 660)
+level = 3

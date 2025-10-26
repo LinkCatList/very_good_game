@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://5pp6uvnx82g7"]
+
+[ext_resource type="Script" uid="uid://bd06vivoolejl" path="res://teleport.gd" id="1_f74dl"]
+[ext_resource type="Texture2D" uid="uid://ofk0vqc85q11" path="res://pumpkin.png" id="1_njnk4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dfjp"]
+size = Vector2(130, 130)
+
+[node name="Teleport" type="StaticBody2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_f74dl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4dfjp")
+
+[node name="NewPiskel(3)" type="Sprite2D" parent="."]
+position = Vector2(8, 1)
+scale = Vector2(0.467187, 0.467187)
+texture = ExtResource("1_njnk4")
