@@ -1,10 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3se8xfp0h0id"]
+[gd_scene load_steps=7 format=3 uid="uid://bo4lumfku0bie"]
 
-[ext_resource type="Script" path="res://new_script.gd" id="1_wj5gw"]
+[ext_resource type="Script" uid="uid://dwi0eqjuhyjun" path="res://new_script.gd" id="1_wj5gw"]
 [ext_resource type="Texture2D" uid="uid://6kjulnce407q" path="res://New Piskel (2).png" id="2_pfw5v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evgax"]
 size = Vector2(132, 132)
+
+[sub_resource type="Animation" id="Animation_onrkg"]
+resource_name = "make_alive"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NewPiskel(2):scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.411833, 0.411833), Vector2(0.412, 0.35), Vector2(0.411833, 0.411833)]
+}
+
+[sub_resource type="Animation" id="Animation_i3pqv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NewPiskel(2):scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.411833, 0.411833)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hqtel"]
+_data = {
+&"RESET": SubResource("Animation_i3pqv"),
+&"make_alive": SubResource("Animation_onrkg")
+}
 
 [node name="Zombak" type="RigidBody2D"]
 gravity_scale = 0.0
@@ -17,3 +54,9 @@ shape = SubResource("RectangleShape2D_evgax")
 position = Vector2(9.53674e-07, 5.42101e-20)
 scale = Vector2(0.411833, 0.411833)
 texture = ExtResource("2_pfw5v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hqtel")
+}
+autoplay = "make_alive"
