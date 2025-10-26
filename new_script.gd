@@ -25,7 +25,6 @@ func activate_target(target: Sprite2D):
 
 var pickaxe = false
 var canUsePickaxe = false
-var allPumpkins = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -62,7 +61,7 @@ func _process(delta: float) -> void:
 	if len(result) > 0:
 		var object = result[0]["collider"]
 
-		if object.scene_file_path.get_file().get_basename() == "grave":
+		if object.scene_file_path.get_file().get_basename() == "grave" or object.scene_file_path.get_file().get_basename() == "fake_wall":
 			if pickaxeHandle.visible:
 				object.queue_free()
 				canUsePickaxe = false
@@ -92,7 +91,6 @@ func _process(delta: float) -> void:
 			object.queue_free()
 			activate_target(FoodTarget)
 			self.global_position += move_vector
-			allPumpkins = true	
 			
 		if object.scene_file_path.get_file().get_basename() == "balloon":
 			object.queue_free()
