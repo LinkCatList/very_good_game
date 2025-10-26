@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bo4lumfku0bie" path="res://player.tscn" id="1_ikhpv"]
 [ext_resource type="PackedScene" uid="uid://bsranruglqb0k" path="res://grave.tscn" id="3_3qih6"]
-[ext_resource type="PackedScene" uid="uid://0be6od88x3xe" path="res://cat.tscn" id="4_nobhg"]
+[ext_resource type="PackedScene" path="res://cat.tscn" id="4_nobhg"]
 [ext_resource type="PackedScene" uid="uid://wj62pkoa0x5a" path="res://wall.tscn" id="4_ra3a6"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_2pjy8"]
@@ -13,30 +13,33 @@ scenes/2/scene = ExtResource("4_ra3a6")
 sources/1 = SubResource("TileSetScenesCollectionSource_2pjy8")
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(396, 264)
 
 [node name="Zombak" parent="." instance=ExtResource("1_ikhpv")]
-position = Vector2(-132, -132)
+position = Vector2(264, 264)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(0, -132)
+position = Vector2(396, 264)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(-132, 0)
+position = Vector2(264, 396)
 
 [node name="Wall" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(-132, -264)
+position = Vector2(264, 132)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-position = Vector2(264, 396)
+position = Vector2(660, 792)
 scale = Vector2(1.09697, 1.04696)
 tile_set = SubResource("TileSet_rrfjw")
 
 [node name="Wall2" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(528, 0)
+position = Vector2(924, 396)
 
 [node name="Wall3" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(264, 132)
+position = Vector2(660, 528)
 
 [node name="Wall4" parent="." instance=ExtResource("4_nobhg")]
-position = Vector2(0, 132)
+position = Vector2(396, 528)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(0.25, 0.25)
