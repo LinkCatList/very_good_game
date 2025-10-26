@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bntapn4gri3fw"]
+[gd_scene load_steps=7 format=3 uid="uid://bntapn4gri3fw"]
 
 [ext_resource type="PackedScene" uid="uid://d3se8xfp0h0id" path="res://player.tscn" id="1_ikhpv"]
 [ext_resource type="PackedScene" uid="uid://bsranruglqb0k" path="res://grave.tscn" id="3_3qih6"]
+[ext_resource type="PackedScene" uid="uid://0be6od88x3xe" path="res://cat.tscn" id="4_nobhg"]
 [ext_resource type="PackedScene" uid="uid://wj62pkoa0x5a" path="res://wall.tscn" id="4_ra3a6"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_2pjy8"]
@@ -24,7 +25,7 @@ position = Vector2(0, -132)
 position = Vector2(-132, 0)
 
 [node name="Wall" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(264, -132)
+position = Vector2(-132, -264)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(264, 396)
@@ -36,3 +37,6 @@ position = Vector2(528, 0)
 
 [node name="Wall3" parent="." instance=ExtResource("4_ra3a6")]
 position = Vector2(264, 132)
+
+[node name="Wall4" parent="." instance=ExtResource("4_nobhg")]
+position = Vector2(0, 132)
