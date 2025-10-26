@@ -19,8 +19,10 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("move_down"):
 		move_vector.y += SPEED
 	
-	var collide_result = move_and_collide(move_vector)
-	if collide_result != null and collide_result.get_collider_shape().get_parent().has_method("move"):
-		collide_result.get_collider_shape().get_parent().move(move_vector)
+	var result = Bobrik.move_and_collide_2_0_new_edition(self, move_vector)
+	if len(result) > 0:
+		var object = result[0]["collider"]
+		if object.scene_file_path.get_file().get_basename() == "grave":
+			object.move(move_vector)
 		
 	pass

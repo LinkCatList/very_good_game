@@ -11,6 +11,6 @@ size = Vector2(130, 130)
 shape = SubResource("RectangleShape2D_4dfjp")
 
 [node name="NewPiskel(3)" type="Sprite2D" parent="."]
-position = Vector2(74, 72)
+position = Vector2(8, 1)
 scale = Vector2(0.467187, 0.467187)
 texture = ExtResource("1_nfsbv")

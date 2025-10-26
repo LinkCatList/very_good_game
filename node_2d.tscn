@@ -1,12 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bntapn4gri3fw"]
+[gd_scene load_steps=6 format=3 uid="uid://bntapn4gri3fw"]
 
-[ext_resource type="Script" path="res://new_script.gd" id="2_t3a1m"]
+[ext_resource type="PackedScene" uid="uid://d3se8xfp0h0id" path="res://player.tscn" id="1_ikhpv"]
 [ext_resource type="PackedScene" uid="uid://bsranruglqb0k" path="res://grave.tscn" id="3_3qih6"]
-[ext_resource type="Texture2D" uid="uid://6kjulnce407q" path="res://New Piskel (2).png" id="3_e7qqo"]
 [ext_resource type="PackedScene" uid="uid://wj62pkoa0x5a" path="res://wall.tscn" id="4_ra3a6"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_evgax"]
-size = Vector2(132, 132)
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_2pjy8"]
 scenes/1/scene = ExtResource("4_ra3a6")
@@ -18,27 +14,25 @@ sources/1 = SubResource("TileSetScenesCollectionSource_2pjy8")
 [node name="Node2D" type="Node2D"]
 position = Vector2(264, 264)
 
-[node name="Zombak" type="RigidBody2D" parent="."]
-gravity_scale = 0.0
-script = ExtResource("2_t3a1m")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Zombak"]
-shape = SubResource("RectangleShape2D_evgax")
-
-[node name="NewPiskel(2)" type="Sprite2D" parent="Zombak"]
-position = Vector2(8, 5.42101e-20)
-scale = Vector2(0.411833, 0.411833)
-texture = ExtResource("3_e7qqo")
+[node name="Zombak" parent="." instance=ExtResource("1_ikhpv")]
+position = Vector2(-132, -132)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(0, 132)
+position = Vector2(0, -132)
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("3_3qih6")]
-position = Vector2(132, 0)
+position = Vector2(-132, 0)
 
 [node name="Wall" parent="." instance=ExtResource("4_ra3a6")]
-position = Vector2(384, 0)
+position = Vector2(264, -132)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(264, 396)
+scale = Vector2(1.09697, 1.04696)
 tile_set = SubResource("TileSet_rrfjw")
+
+[node name="Wall2" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(528, 0)
+
+[node name="Wall3" parent="." instance=ExtResource("4_ra3a6")]
+position = Vector2(264, 132)

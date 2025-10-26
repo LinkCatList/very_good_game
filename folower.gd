@@ -11,4 +11,4 @@ func _process(delta: float) -> void:
 	pass
 	
 func move(vector: Vector2):
-	move_and_collide(vector)
+	Bobrik.move_and_collide_2_0_new_edition(self, vector)

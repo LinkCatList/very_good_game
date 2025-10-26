@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Bobrik="*res://engine.gd"
+Bobrik="*res://bobrik.gd"
 
 [input]
 
