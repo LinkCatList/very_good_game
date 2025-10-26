@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -9,8 +9,3 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	
-func move(vector: Vector2):
-	var result = Bobrik.move_and_collide_2_0_new_edition(self, vector)
-	if len(result) == 0:
-		self.global_position += vector

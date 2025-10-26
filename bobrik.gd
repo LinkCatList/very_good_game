@@ -14,7 +14,7 @@ func move_and_collide_2_0_new_edition(node: Node, offset: Vector2):
 	var result = space_state.intersect_point(parameters, 4)
 	
 	
-	if len(result) == 0:
-		node.global_position += offset
+	#if len(result) == 0:
+		#node.global_position += offset
 	
 	return result

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bsranruglqb0k"]
 
-[ext_resource type="Script" uid="uid://b561yhhwne8mj" path="res://folower.gd" id="1_0s3ff"]
+[ext_resource type="Script" path="res://folower.gd" id="1_0s3ff"]
 [ext_resource type="Texture2D" uid="uid://sm1saiispwtg" path="res://grave.png" id="2_km7b6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_doo1n"]

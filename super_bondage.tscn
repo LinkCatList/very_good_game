@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdmque1vo86m3"]
+
+[ext_resource type="Texture2D" uid="uid://d1sikjjcbw1la" path="res://bondage.png" id="2_h0y5l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkfgc"]
+size = Vector2(130, 130)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="."]
+scale = Vector2(1.01846, 1.0868)
+texture = ExtResource("2_h0y5l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wkfgc")

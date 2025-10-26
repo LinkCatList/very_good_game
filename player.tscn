@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bo4lumfku0bie"]
+[gd_scene load_steps=8 format=3 uid="uid://d3se8xfp0h0id"]
 
-[ext_resource type="Script" uid="uid://dwi0eqjuhyjun" path="res://new_script.gd" id="1_wj5gw"]
+[ext_resource type="Script" path="res://new_script.gd" id="1_wj5gw"]
 [ext_resource type="Texture2D" uid="uid://6kjulnce407q" path="res://rick.png" id="2_pfw5v"]
-[ext_resource type="Texture2D" uid="uid://ofk0vqc85q11" path="res://pumpkin.png" id="3_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://ciccshts7g521" path="res://pickaxe.png" id="3_wqagn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evgax"]
 size = Vector2(132, 132)
@@ -40,8 +40,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hqtel"]
 _data = {
-&"RESET": SubResource("Animation_i3pqv"),
-&"make_alive": SubResource("Animation_onrkg")
+"RESET": SubResource("Animation_i3pqv"),
+"make_alive": SubResource("Animation_onrkg")
 }
 
 [node name="Zombak" type="RigidBody2D"]
@@ -65,12 +65,12 @@ texture = ExtResource("2_pfw5v")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_hqtel")
+"": SubResource("AnimationLibrary_hqtel")
 }
 autoplay = "make_alive"
 
 [node name="Pickaxe" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(27, 11)
-scale = Vector2(0.203125, 0.234375)
-texture = ExtResource("3_i3pqv")
+scale = Vector2(0.303, 0.35)
+texture = ExtResource("3_wqagn")

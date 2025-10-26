@@ -1,14 +1,19 @@
-[gd_scene load_steps=13 format=3 uid="uid://bntapn4gri3fw"]
+[gd_scene load_steps=18 format=3 uid="uid://bntapn4gri3fw"]
 
 [ext_resource type="Texture2D" uid="uid://cl6ci0xdqxvvx" path="res://dirt.png" id="1_dny71"]
-[ext_resource type="PackedScene" uid="uid://bo4lumfku0bie" path="res://player.tscn" id="1_ikhpv"]
+[ext_resource type="PackedScene" uid="uid://d3se8xfp0h0id" path="res://player.tscn" id="1_ikhpv"]
 [ext_resource type="Texture2D" uid="uid://cefyia4q6v2rm" path="res://grass.png" id="1_uqft6"]
 [ext_resource type="PackedScene" uid="uid://bsranruglqb0k" path="res://grave.tscn" id="3_3qih6"]
-[ext_resource type="PackedScene" path="res://cat.tscn" id="4_nobhg"]
+[ext_resource type="PackedScene" uid="uid://0be6od88x3xe" path="res://cat.tscn" id="4_nobhg"]
 [ext_resource type="PackedScene" uid="uid://wj62pkoa0x5a" path="res://wall.tscn" id="4_ra3a6"]
 [ext_resource type="Texture2D" uid="uid://cpfxurttyooo1" path="res://New Piskel (11).png" id="7_2iph2"]
-[ext_resource type="Script" uid="uid://u7nnxcgbph8o" path="res://restart_button.gd" id="7_2m46o"]
-[ext_resource type="Texture2D" uid="uid://ofk0vqc85q11" path="res://pumpkin.png" id="9_4d7sh"]
+[ext_resource type="Script" path="res://restart_button.gd" id="7_2m46o"]
+[ext_resource type="Texture2D" uid="uid://ce76k1os4d2b6" path="res://music_player.png" id="9_m0m0b"]
+[ext_resource type="Texture2D" uid="uid://ciccshts7g521" path="res://pickaxe.png" id="10_wof2e"]
+[ext_resource type="Texture2D" uid="uid://d1sikjjcbw1la" path="res://bondage.png" id="11_ohhng"]
+[ext_resource type="Texture2D" uid="uid://bguln16p8j0k5" path="res://food.png" id="12_k3cf1"]
+[ext_resource type="Texture2D" uid="uid://d3lmwy1h2dndf" path="res://balloon.png" id="12_ygm52"]
+[ext_resource type="PackedScene" uid="uid://bdmque1vo86m3" path="res://super_bondage.tscn" id="14_nemd0"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uhbpk"]
 
@@ -177,30 +182,33 @@ position = Vector2(0, 264)
 
 [node name="MusicPlayer" type="Sprite2D" parent="Targets"]
 modulate = Color(1, 1, 1, 0.396078)
-position = Vector2(126, 362)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_4d7sh")
+position = Vector2(132, 396)
+scale = Vector2(1.1125, 1.1125)
+texture = ExtResource("9_m0m0b")
 
 [node name="Pickaxe" type="Sprite2D" parent="Targets"]
 modulate = Color(1, 1, 1, 0.396078)
-position = Vector2(123, 502)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_4d7sh")
+position = Vector2(132, 528)
+scale = Vector2(1.13125, 1.13125)
+texture = ExtResource("10_wof2e")
 
 [node name="Bondage" type="Sprite2D" parent="Targets"]
 modulate = Color(1, 1, 1, 0.396078)
-position = Vector2(123, 645)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_4d7sh")
+position = Vector2(132, 660)
+scale = Vector2(1.13125, 1.13125)
+texture = ExtResource("11_ohhng")
 
 [node name="Food" type="Sprite2D" parent="Targets"]
 modulate = Color(1, 1, 1, 0.396078)
-position = Vector2(120, 786)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_4d7sh")
+position = Vector2(132, 780)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("12_k3cf1")
 
 [node name="Balloon" type="Sprite2D" parent="Targets"]
 modulate = Color(1, 1, 1, 0.396078)
-position = Vector2(120, 921)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_4d7sh")
+position = Vector2(132, 924)
+scale = Vector2(1.375, 1.375)
+texture = ExtResource("12_ygm52")
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("14_nemd0")]
+position = Vector2(792, 528)

@@ -8,14 +8,20 @@ var superBondage = $SuperBondage
 @onready
 var pickaxeHandle = $Pickaxe
 
+@onready
+var BondageTarget = $"../Targets/Bondage"
+
+func activate_target(target: Sprite2D):
+	target.modulate = Color.WHITE
+
+
 var pickaxe = false
 var canUsePickaxe = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	canUsePickaxe = true
-	activate_super_bondage()
-	activate_pickaxe()
+	#activate_super_bondage()
+	#activate_pickaxe()
 	pass # Replace with function body.
 
 func activate_super_bondage():
@@ -23,6 +29,7 @@ func activate_super_bondage():
 	bondage.visible = false
 
 func activate_pickaxe():
+	canUsePickaxe = true
 	pickaxe = true
 
 
@@ -42,7 +49,7 @@ func _process(delta: float) -> void:
 	var result = Bobrik.move_and_collide_2_0_new_edition(self, move_vector)
 	if len(result) > 0:
 		var object = result[0]["collider"]
-		
+
 		if object.scene_file_path.get_file().get_basename() == "grave":
 			if pickaxeHandle.visible:
 				object.queue_free()
@@ -50,6 +57,19 @@ func _process(delta: float) -> void:
 				pickaxeHandle.visible = false
 			else:
 				object.move(move_vector)
+				
+		if object.scene_file_path.get_file().get_basename() == "pickaxe":
+			self.global_position += move_vector
+			activate_pickaxe()
+
+		if object.scene_file_path.get_file().get_basename() == "super_bondage":
+			object.queue_free()
+			activate_target(BondageTarget)
+			self.global_position += move_vector
+			activate_super_bondage()
+	else:
+		self.global_position += move_vector
+		
 	
 	if canUsePickaxe and Input.is_action_just_pressed("action"):
 		pickaxeHandle.visible = not pickaxeHandle.visible
