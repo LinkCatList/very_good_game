@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3se8xfp0h0id"]
+[gd_scene load_steps=8 format=3 uid="uid://bo4lumfku0bie"]
 
-[ext_resource type="Script" path="res://new_script.gd" id="1_wj5gw"]
-[ext_resource type="Texture2D" uid="uid://6kjulnce407q" path="res://New Piskel (2).png" id="2_pfw5v"]
+[ext_resource type="Script" uid="uid://dwi0eqjuhyjun" path="res://new_script.gd" id="1_wj5gw"]
+[ext_resource type="Texture2D" uid="uid://6kjulnce407q" path="res://rick.png" id="2_pfw5v"]
+[ext_resource type="Texture2D" uid="uid://ofk0vqc85q11" path="res://pumpkin.png" id="3_i3pqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evgax"]
 size = Vector2(132, 132)
@@ -11,7 +12,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("NewPiskel(2):scale")
+tracks/0/path = NodePath("Bondage:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -27,7 +28,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("NewPiskel(2):scale")
+tracks/0/path = NodePath("Bondage:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -39,8 +40,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hqtel"]
 _data = {
-"RESET": SubResource("Animation_i3pqv"),
-"make_alive": SubResource("Animation_onrkg")
+&"RESET": SubResource("Animation_i3pqv"),
+&"make_alive": SubResource("Animation_onrkg")
 }
 
 [node name="Zombak" type="RigidBody2D"]
@@ -50,13 +51,26 @@ script = ExtResource("1_wj5gw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_evgax")
 
-[node name="NewPiskel(2)" type="Sprite2D" parent="."]
+[node name="Bondage" type="Sprite2D" parent="."]
+position = Vector2(9.53674e-07, 5.42101e-20)
+scale = Vector2(0.411833, 0.411833)
+texture = ExtResource("2_pfw5v")
+
+[node name="SuperBondage" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0, 1)
 position = Vector2(9.53674e-07, 5.42101e-20)
 scale = Vector2(0.411833, 0.411833)
 texture = ExtResource("2_pfw5v")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_hqtel")
+&"": SubResource("AnimationLibrary_hqtel")
 }
 autoplay = "make_alive"
+
+[node name="Pickaxe" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(27, 11)
+scale = Vector2(0.203125, 0.234375)
+texture = ExtResource("3_i3pqv")

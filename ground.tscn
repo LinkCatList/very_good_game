@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cbdcdgh63rtd3"]
+[gd_scene load_steps=0 format=3 uid="uid://cbdcdgh63rtd3"]
 
 [node name="Ground" type="Node2D"]
 
